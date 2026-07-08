@@ -1,14 +1,33 @@
+import { Header } from "@/components/layout/header";
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-6 container-content text-center">
-      <p className="text-small uppercase tracking-widest">Teste de tokens</p>
-      <h1 className="text-display">
-        Fundo escuro, texto claro,<br /> accent <span className="text-accent">azul</span>.
-      </h1>
-      <p className="text-body max-w-md">
-        Se você está vendo isso em tema escuro com esse título em destaque azul,
-        os tokens da Etapa 2 estão funcionando corretamente.
-      </p>
-    </main>
+    <>
+      <Header />
+
+      <main>
+        <section className="min-h-[80vh] flex flex-col items-center justify-center container-content text-center">
+          <p className="text-small uppercase tracking-widest">Hero</p>
+          <h1 className="text-display mt-4">Etapa 4 vem aqui</h1>
+        </section>
+
+        {/* Placeholders — cada seção será construída na sua própria etapa */}
+        <section id="jornada" className="section-spacing container-content">
+          <p className="text-small">#jornada — placeholder</p>
+        </section>
+        <section id="como-aprendo" className="section-spacing container-content">
+          <p className="text-small">#como-aprendo — placeholder</p>
+        </section>
+        <section id="projetos" className="section-spacing container-content">
+          <p className="text-small">#projetos — placeholder</p>
+        </section>
+        <section id="estudando" className="section-spacing container-content">
+          <p className="text-small">#estudando — placeholder</p>
+        </section>
+        <section id="contato" className="section-spacing container-content">
+          <p className="text-small">#contato — placeholder</p>
+        </section>
+      </main>
+    </>
   );
 }
