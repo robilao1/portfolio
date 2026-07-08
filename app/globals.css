@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* ============================================
+   DESIGN TOKENS — Portfólio
+   Dark mode único. Accent azul saturado (estilo Vercel).
+   Tailwind v4 — configuração via CSS (@theme), sem tailwind.config.ts
+   ============================================ */
+
+@theme {
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+
+  /* Backgrounds — nunca preto puro, cansa a vista */
+  --color-background: #0a0a0b;
+  --color-background-elevated: #18181b;
+  --color-background-hover: #202024;
+
+  /* Texto — hierarquia por opacidade, não por cor */
+  --color-foreground: #fafafa;
+  --color-foreground-secondary: #b3b3b3;
+  --color-foreground-muted: #757579;
+
+  /* Bordas */
+  --color-border: #29292e;
+  --color-border-hover: #38383f;
+
+  /* Accent — azul saturado */
+  --color-accent: #3b82f6;
+  --color-accent-hover: #60a5fa;
+  --color-accent-foreground: #ffffff;
+
+  /* Estados semânticos (uso pontual) */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "cv11", "ss01";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ============================================
+   ESCALA TIPOGRÁFICA — 6 tamanhos, sem exagero
+   ============================================ */
+
+@layer utilities {
+  .text-display {
+    @apply text-5xl md:text-6xl font-medium tracking-tight leading-[1.05];
+  }
+  .text-heading {
+    @apply text-2xl md:text-4xl font-medium tracking-tight leading-tight;
+  }
+  .text-subheading {
+    @apply text-lg md:text-xl font-normal leading-relaxed;
+    color: var(--color-foreground-secondary);
+  }
+  .text-body {
+    @apply text-base font-normal leading-relaxed;
+    color: var(--color-foreground-secondary);
+  }
+  .text-small {
+    @apply text-sm font-normal;
+    color: var(--color-foreground-muted);
+  }
+
+  .section-spacing {
+    @apply py-24 md:py-32;
+  }
+  .container-content {
+    @apply max-w-5xl mx-auto px-6 md:px-8;
+  }
+}
