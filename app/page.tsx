@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Hero } from "@/components/sections/hero";
 import { Jornada } from "@/components/sections/jornada";
+import { ComoAprendo } from "@/components/sections/como-aprendo";
 
 export default function Home() {
   return (
@@ -10,9 +11,7 @@ export default function Home() {
       <main>
         <Hero />
         <Jornada />
-        <section id="como-aprendo" className="section-spacing container-content">
-          <p className="text-small">#como-aprendo — placeholder</p>
-        </section>
+        <ComoAprendo />
         <section id="projetos" className="section-spacing container-content">
           <p className="text-small">#projetos — placeholder</p>
         </section>
