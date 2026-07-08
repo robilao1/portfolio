@@ -1,4 +1,5 @@
 import { Header } from "@/components/layout/header";
+import { Hero } from "@/components/sections/hero";
 
 export default function Home() {
   return (
@@ -6,10 +7,7 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="min-h-[80vh] flex flex-col items-center justify-center container-content text-center">
-          <p className="text-small uppercase tracking-widest">Hero</p>
-          <h1 className="text-display mt-4">Etapa 4 vem aqui</h1>
-        </section>
+        <Hero />
 
         {/* Placeholders — cada seção será construída na sua própria etapa */}
         <section id="jornada" className="section-spacing container-content">
