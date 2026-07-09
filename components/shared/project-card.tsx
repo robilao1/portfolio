@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { Project } from "@/types/project";
 
@@ -12,9 +13,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-small uppercase tracking-widest">
           {project.tagline}
         </p>
-        <h3 className="text-lg font-medium text-foreground mt-2">
-          {project.name}
-        </h3>
+        <Link href={`/projetos/${project.slug}`}>
+          <h3 className="text-lg font-medium text-foreground mt-2 hover:text-accent transition-colors">
+            {project.name}
+          </h3>
+        </Link>
         <p className="text-body mt-3">{project.description}</p>
 
         <div className="flex flex-wrap gap-2 mt-5">
@@ -29,17 +32,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      {project.liveUrl && (
-        <a
-          href={project.liveUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-hover transition-colors mt-6"
+      <div className="flex items-center gap-5 mt-6">
+        <Link
+          href={`/projetos/${project.slug}`}
+          className="text-sm font-medium text-foreground-secondary hover:text-foreground transition-colors"
         >
-          Ver projeto ao vivo
-          <ArrowUpRight size={16} />
-        </a>
-      )}
+          Ver detalhes
+        </Link>
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent-hover transition-colors"
+          >
+            Ver ao vivo
+            <ArrowUpRight size={16} />
+          </a>
+        )}
+      </div>
     </div>
   );
 }
