@@ -30,6 +30,7 @@ export const projects: Project[] = [
     features: [
       "Motor de priorização de clientes por urgência de retorno",
       "Autenticação multi-tenant (várias clínicas, dados isolados)",
+      "Assinatura recorrente via Asaas — 7 dias de teste grátis, acesso liberado por 30 dias após pagamento",
       "Camada administrativa para gestão da plataforma",
     ],
     stack: ["HTML", "JavaScript", "Supabase"],
