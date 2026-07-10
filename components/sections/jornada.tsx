@@ -7,13 +7,13 @@ const MILESTONES = [
     period: "Início",
     title: "No-code e automação",
     description:
-      "Comecei mexendo com n8n e EvolutionAPI, automatizando processos reais para negócios. Foi minha porta de entrada para lógica, integrações e sistemas.",
+      "Comecei estudando agentes de IA na prática: subi minha própria infraestrutura com Docker, rodando n8n, Redis e EvolutionAPI, e integrando com a API da OpenAI. Aprendi a configurar credenciais e conectar serviços (Redis, OpenAI, Google Drive, entre outros) e usei esse ambiente para criar agentes de suporte capazes de atender clientes de clínicas — respondendo dúvidas e automatizando o primeiro contato. Foram projetos de estudo, feitos para mim mesmo, mas foi aí que ganhei minha primeira noção real de lógica, integrações e como estruturar prompts para agentes de IA.",
   },
   {
     period: "Em seguida",
     title: "Mergulho nos fundamentos",
     description:
-      "Passei a estudar programação de verdade — HTML, CSS, JavaScript, lógica, como a web funciona por trás dos panos.",
+      "Comecei a estudar como a web funciona por trás dos panos — e esse é um estudo contínuo, que sigo até hoje. Entender o papel de cada peça: o que é HTML, o que é CSS, o que é JavaScript, e principalmente quando e por que usar cada um em situações reais. Não é sobre decorar sintaxe, é sobre entender a real utilidade de cada tecnologia.",
   },
   {
     period: "Construindo",
