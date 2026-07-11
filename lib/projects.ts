@@ -17,6 +17,16 @@ export const projects: Project[] = [
     ],
     stack: ["HTML", "JavaScript", "Supabase", "Mapbox"],
     liveUrl: "https://chamefrete.com.br",
+    images: [
+      {
+        src: "/images/projects/chame-frete/landing.png",
+        alt: "Tela inicial do Chame Frete com as opções 'Sou Cliente' e 'Sou Fretante'",
+      },
+      {
+        src: "/images/projects/chame-frete/mapa.png",
+        alt: "Mapa em tempo real do Chame Frete com filtros por tipo de veículo e fretantes próximos",
+      },
+    ],
   },
   {
     slug: "poscrm",

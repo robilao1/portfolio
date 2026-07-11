@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { projects } from "@/lib/projects";
 
@@ -69,6 +70,25 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </a>
         )}
       </div>
+
+      {project.images && project.images.length > 0 && (
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {project.images.map((image) => (
+            <div
+              key={image.src}
+              className="relative aspect-video rounded-[var(--radius)] overflow-hidden border border-border bg-background-elevated"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, 50vw"
+                className="object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="mt-16 space-y-12">
         <section>

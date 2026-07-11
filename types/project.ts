@@ -1,3 +1,8 @@
+export interface ProjectImage {
+  src: string;
+  alt: string;
+}
+
 export interface Project {
   slug: string;
   name: string;
@@ -8,4 +13,5 @@ export interface Project {
   features: string[];
   stack: string[];
   liveUrl?: string;
+  images?: ProjectImage[];
 }
