@@ -35,6 +35,21 @@ export const metadata: Metadata = {
       "Autodidata construindo sistemas reais enquanto aprende os fundamentos técnicos.",
     locale: "pt_BR",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Robison — Desenvolvedor Full Stack Júnior",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Robison — Desenvolvedor Full Stack Júnior",
+    description:
+      "Autodidata construindo sistemas reais enquanto aprende os fundamentos técnicos.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
