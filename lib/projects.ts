@@ -9,7 +9,7 @@ export const projects: Project[] = [
       "Plataforma que conecta quem precisa enviar carga com motoristas e transportadoras, facilitando a busca e negociação de fretes.",
     problem:
       "Conectar clientes a fretantes da cidade — quem precisa transportar algo encontra, de forma rápida, quem pode fazer o frete.",
-    role: "Desenvolvi sozinho, do zero: frontend, backend e integrações.",
+    role: "Desenvolvi sozinho, do zero: frontend, backend e fiz as integrações.",
     features: [
       "Cadastro de fretantes e clientes",
       "Busca por localização com Mapbox",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
       "Sistema multi-tenant que ajuda clínicas estéticas a priorizar e não perder o acompanhamento de clientes após procedimentos.",
     problem:
       "Clínicas estéticas perdem o acompanhamento de clientes após o procedimento, prejudicando retenção e resultado do tratamento.",
-    role: "Desenvolvi sozinho, do zero: frontend, backend e integrações.",
+    role: "Desenvolvi sozinho, do zero: frontend, backend e fiz as integrações.",
     features: [
       "Motor de priorização de clientes por urgência de retorno",
       "Autenticação multi-tenant (várias clínicas, dados isolados)",
@@ -45,5 +45,15 @@ export const projects: Project[] = [
     ],
     stack: ["HTML", "JavaScript", "Supabase"],
     liveUrl: "https://lembrarclientelp.netlify.app/",
+    images: [
+      {
+        src: "/images/projects/poscrm/dashboard.png",
+        alt: "Painel do PósCRM mostrando clientes priorizados por urgência de retorno, com contagem de urgentes, no ponto ideal e contatados",
+      },
+      {
+        src: "/images/projects/poscrm/landing.png",
+        alt: "Página inicial do PósCRM explicando o fluxo de uso: revisar clientes e enviar lembrete pelo WhatsApp",
+      },
+    ],
   },
 ];
