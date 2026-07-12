@@ -17,6 +17,13 @@ export const projects: Project[] = [
     ],
     stack: ["HTML", "JavaScript", "Supabase", "Mapbox"],
     liveUrl: "https://chamefrete.com.br",
+    challenges: [
+      {
+        title: "Segurança da aplicação",
+        description:
+          "Depois do sistema pronto, me deparei com uma pergunta que não sabia responder: como garantir a segurança das informações, sem ter experiência prévia em segurança de aplicações? Pesquisei a fundo e cheguei à ideia de fazer uma auditoria de vulnerabilidades — chaves expostas, senhas, exposição de dados sensíveis. Construí o contexto certo no ChatGPT, gerei um prompt de auditoria estruturado, e usei o Claude para escanear o sistema com uma regra clara: identificar vulnerabilidades sem alterar nada que já estava funcionando. A partir do relatório, corrigi as falhas em ordem de risco — das mais críticas às mais simples — sem quebrar nada em produção.",
+      },
+    ],
     images: [
       {
         src: "/images/projects/chame-frete/landing.png",
@@ -45,6 +52,18 @@ export const projects: Project[] = [
     ],
     stack: ["HTML", "JavaScript", "Supabase"],
     liveUrl: "https://lembrarclientelp.netlify.app/",
+    challenges: [
+      {
+        title: "Segurança da aplicação",
+        description:
+          "Antes de expor o sistema a clientes reais, precisei garantir a segurança das informações mesmo sem experiência prévia na área. Usei o mesmo processo de auditoria que apliquei no Chame Frete: construí um prompt de auditoria de vulnerabilidades — chaves expostas, senhas, exposição de dados — e usei o Claude para escanear o sistema sem alterar o que já funcionava. Corrigi as falhas encontradas em ordem de risco, das mais críticas às mais simples.",
+      },
+      {
+        title: "Integração de pagamento recorrente com Asaas",
+        description:
+          "Ao integrar o webhook de confirmação de pagamento do Asaas, recebi repetidamente erro 400 na comunicação entre os sistemas. Investiguei o payload esperado, refiz a estrutura do webhook, e consegui a resposta 200 — garantindo que o acesso de 30 dias só é liberado quando o pagamento é confirmado de verdade pelo gateway.",
+      },
+    ],
     images: [
       {
         src: "/images/projects/poscrm/dashboard.png",

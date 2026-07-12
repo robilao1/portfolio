@@ -3,6 +3,11 @@ export interface ProjectImage {
   alt: string;
 }
 
+export interface ProjectChallenge {
+  title: string;
+  description: string;
+}
+
 export interface Project {
   slug: string;
   name: string;
@@ -11,6 +16,7 @@ export interface Project {
   problem: string;
   role: string;
   features: string[];
+  challenges?: ProjectChallenge[];
   stack: string[];
   liveUrl?: string;
   images?: ProjectImage[];

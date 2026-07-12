@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, ShieldCheck } from "lucide-react";
 import { projects } from "@/lib/projects";
 
 interface ProjectPageProps {
@@ -113,6 +113,33 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             ))}
           </ul>
         </section>
+
+        {project.challenges && project.challenges.length > 0 && (
+          <section>
+            <h2 className="text-lg font-medium text-foreground">
+              Desafios técnicos
+            </h2>
+            <div className="mt-3 space-y-6">
+              {project.challenges.map((challenge) => (
+                <div key={challenge.title} className="flex gap-3">
+                  <ShieldCheck
+                    size={18}
+                    className="text-accent mt-0.5 shrink-0"
+                    strokeWidth={1.75}
+                  />
+                  <div>
+                    <h3 className="text-sm font-medium text-foreground">
+                      {challenge.title}
+                    </h3>
+                    <p className="text-body mt-1.5">
+                      {challenge.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section>
           <h2 className="text-lg font-medium text-foreground">Meu papel</h2>
